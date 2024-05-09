@@ -22,7 +22,8 @@ html {
 
 #error {
   color: red;
-  display: none;
+  display: block;
+  font-size: small;
 }
 
 .container {
@@ -490,7 +491,7 @@ section > .container > header {
 }
 
 #message > .container > .flex > .right > p {
-  width: 100%;
+  width: 80%;
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: small;
