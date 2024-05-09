@@ -759,12 +759,6 @@ footer > .container > p > a {
 
 @media only screen and (max-width: 600px) {
   .header-sosmed {
-    /* position: fixed;
-    background-color: #0b2761;
-    margin-top: ;
-    margin-left: 60%;
-    border-radius: 50px;
-    overflow: hidden; */
     display: none;
   }
 
