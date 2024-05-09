@@ -22,7 +22,7 @@ html {
 
 #error {
   color: red;
-  display: block;
+  display: none;
   font-size: small;
 }
 
