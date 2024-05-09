@@ -4,6 +4,27 @@
   font-family: "Poppins";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#search-btn-mobile {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+#icon-search-btn {
+  width: 8px;
+}
+
+#error {
+  color: red;
+  display: none;
+}
+
 .container {
   margin: 5% 10% 5% 10%;
 }
@@ -37,6 +58,16 @@
   padding-bottom: 20px;
 }
 
+#search {
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: small;
+  text-decoration: none;
+  color: black;
+}
+
 .logo-search-right {
   width: 70%;
   height: 100%;
@@ -52,6 +83,10 @@
   border-style: none;
   padding-left: 30px;
   padding-right: 20px;
+}
+
+.logo-search > .logo-search-right > input:focus {
+  outline-width: 0px;
 }
 
 .logo-search > .logo-search-right > img {
@@ -148,6 +183,7 @@
   width: 100%;
   height: 562px;
   transition: 1s ease;
+  object-fit: cover;
 }
 
 .prev-next {
@@ -163,11 +199,9 @@
   margin-top: 250px;
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.prev-next > button {
   background-color: transparent;
   border-style: none;
+  transition: 1000ms ease;
 }
 
 .prev-next > button:hover {
@@ -175,6 +209,7 @@
   transition: 1000ms ease;
 }
 
+/* styling tulisan welcome */
 .welcome {
   display: flex;
   flex-direction: column;
@@ -212,29 +247,30 @@
   transition: 500ms;
 }
 
-.header-section {
+section > .container > header {
   display: block;
   text-align: center;
+  font-size: x-large;
+  font-weight: 800;
   margin-bottom: 30px;
 }
 
 /* styling package */
 
-.flex-4 {
+.flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.flex-4 > .card {
+.flex > .card-4 {
   width: 23%;
   height: auto;
   border-radius: 10px;
   border: 1px solid rgb(189, 189, 189);
 }
 
-.card > a {
-  width: 80px;
+.card-4 > a {
   text-decoration: none;
   color: black;
 }
@@ -258,7 +294,7 @@
   font-size: small;
 }
 
-.card-tag #discount {
+#discount .card-tag span {
   padding: 5px 10px 5px 10px;
   background-color: #ffc400;
   color: white;
@@ -274,15 +310,18 @@
 .card-description {
   margin-left: 10px;
   margin-right: 10px;
+  padding-bottom: 10px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   font-size: small;
 }
 
 .card-description-detail {
   display: inline;
   margin-top: 10px;
+  width: 50%;
 }
 
 .card-description-detail > img {
@@ -294,16 +333,56 @@
 }
 
 .price-tag {
+  padding: 10px;
+  background-color: #99cccc;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
 .price-tag-price {
+  color: #0b2761;
+  font-size: medium;
+}
+
+#discount > .price-tag {
+  padding: 10px;
+  background-color: #ffff99;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-top: auto;
+}
+
+#discount > .price-tag > .price-tag-price {
+  color: #f39200;
+  font-size: medium;
+}
+
+.segitiga {
+  height: 0px;
+  width: 0px;
+  margin: 9px 0px 0px 5px;
+  border-bottom: solid 7px rgb(0, 0, 0);
+  border-left: solid 4px transparent;
+  border-right: solid 4px transparent;
+  transform: rotateZ(90deg);
+  position: absolute;
 }
 
 .price-tag > a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 0px 20px 0px 10px;
+  border-radius: 10px;
+  align-content: center;
 }
 
 .button-section {
   margin-top: 30px;
+  display: block;
+  text-align: center;
 }
 
 .button-section > a {
@@ -312,4 +391,567 @@
   color: white;
   text-decoration: none;
   border-radius: 20px;
+}
+
+/* styling message */
+
+#message > .container > .flex > .left {
+  border-radius: 10px;
+  border: 1px solid rgb(189, 189, 189);
+  width: 55%;
+  height: 360px;
+}
+
+#message > .container > .flex > .left > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#message > .container > .flex > .left > .testimoni {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#message > .container > .flex > .left > .testimoni > img {
+  width: 30px;
+  height: 30px;
+}
+
+#message > .container > .flex > .left > .testimoni > .message {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+#message > .container > .flex > .left > .testimoni > .message > p {
+  font-size: small;
+  color: gray;
+}
+
+#message > .container > .flex > .left > .img-slider-message {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+#message > .container > .flex > .left > .prev-next {
+  width: 100%;
+}
+
+#message > .container > .flex > .left > .prev-next > .prev {
+  position: absolute;
+  color: white;
+  font-size: 36px;
+  margin-top: 110px;
+  margin-left: 30px;
+  background-color: transparent;
+  border-style: none;
+  transition: 1000ms ease;
+}
+
+#message > .container > .flex > .left > .prev-next > .next {
+  position: absolute;
+  color: white;
+  font-size: 36px;
+  margin-top: 110px;
+  margin-left: 40%;
+  background-color: transparent;
+  border-style: none;
+  transition: 1000ms ease;
+}
+
+.prev-next > button:hover {
+  transform: scale(120%);
+  transition: 1000ms ease;
+}
+
+#message > .container > .flex > .right {
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid rgb(189, 189, 189);
+  background-color: aliceblue;
+  text-align: center;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: none;
+}
+
+#message > .container > .flex > .right > header {
+  width: 100%;
+  font-size: large;
+  font-weight: 800;
+}
+
+#message > .container > .flex > .right > p {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: small;
+  font-style: italic;
+  color: grey;
+}
+
+#message > .container > .flex > .right > .form {
+  width: 80%;
+}
+
+#message > .container > .flex > .right > .form > .input-form {
+  width: 100%;
+  text-align: left;
+}
+
+#message > .container > .flex > .right > .form > .input-form > label {
+  font-size: small;
+  font-style: italic;
+  color: gray;
+}
+
+#message > .container > .flex > .right > .form > .input-form > input {
+  width: 92%;
+  height: 2em;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 214, 214);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#message > .container > .flex > .right > .form > .input-form > input:focus {
+  border: 3px solid rgb(0, 214, 214);
+  outline-width: 0px;
+}
+
+#message > .container > .flex > .right > .form > .input-form > textarea {
+  width: 92%;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 214, 214);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#message > .container > .flex > .right > .form > .input-form > textarea:focus {
+  border: 3px solid rgb(0, 214, 214);
+  outline-width: 0px;
+}
+
+#message > .container > .flex > .right > .form > button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #0b2761;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+}
+
+#message > .container > .flex > .right > .form > button:active {
+  filter: brightness(150%);
+}
+
+section > .container > p {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  color: grey;
+  font-style: italic;
+  text-align: center;
+}
+
+.foot-note {
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.foot-note > p {
+  font-weight: 600;
+}
+
+.foot-note > ol {
+  margin-top: 10px;
+  margin-left: 2rem;
+}
+
+footer {
+  background-color: #0b2761;
+  height: 10vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer > .container > p > a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+.header-nav-down {
+  display: none;
+}
+
+.dropdown-user,
+.dropdown-btn,
+.dropdown-list {
+  display: none;
+}
+
+@media only screen and (max-width: 1256px) {
+  .dropdown-user,
+  .dropdown-btn,
+  .dropdown-list {
+    display: flex;
+    background-color: transparent;
+    border: 0px;
+  }
+
+  .header-login {
+    display: none;
+  }
+
+  .dropdown-user > button {
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-user > button > img {
+    width: 30px;
+    height: auto;
+  }
+
+  .dropdown-user > .dropdown-list {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 80px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 90px;
+    margin-left: -30px;
+  }
+
+  .dropdown-user > .dropdown-list > a {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .dropdown-user > .dropdown-list > a:hover {
+    background-color: rgb(224, 224, 224);
+  }
+
+  .triangle-toggle-down {
+    width: 0px;
+    height: 0px;
+    margin-left: 10px;
+    border-bottom: solid 12px rgb(255, 255, 255);
+    border-left: solid 7px transparent;
+    border-right: solid 7px transparent;
+    transform: rotateZ(180deg);
+  }
+
+  .dropdown-user:hover .dropdown-list {
+    display: flex;
+    transition: 1s;
+  }
+}
+
+@media only screen and (max-width: 1156px) {
+  .flex > .card-4 {
+    width: 30%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(189, 189, 189);
+  }
+}
+
+@media only screen and (max-width: 1156px) {
+  .header-nav {
+    display: none;
+  }
+
+  .logo-search {
+    width: 70%;
+  }
+
+  .header-nav-down {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #132342;
+  }
+
+  .header-nav-down > a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    transition: 1s;
+  }
+
+  .header-nav-down > a:hover {
+    background-color: #0e1c3a;
+    transition: 1s;
+  }
+  #message > .container > .flex > .left > .prev-next > .next {
+    margin-left: 39%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .flex > .card-4 {
+    width: 45%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(189, 189, 189);
+  }
+
+  .header-sosmed-header > a {
+    margin: 10px;
+  }
+
+  .header-sosmed {
+    margin-right: 30px;
+  }
+  #message > .container > .flex > .left > .prev-next > .next {
+    margin-left: 38%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #message > .container > .flex > .right {
+    width: 30%;
+  }
+  .logo-search {
+    width: 65%;
+  }
+  #message > .container > .flex > .left > .prev-next > .next {
+    margin-left: 37%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .header-sosmed {
+    width: 10%;
+    margin-right: 40px;
+  }
+
+  .header-sosmed-header > a > img {
+    width: 20px;
+  }
+  #message > .container > .flex > .left > .prev-next > .next {
+    margin-left: 36%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-sosmed {
+    /* position: fixed;
+    background-color: #0b2761;
+    margin-top: ;
+    margin-left: 60%;
+    border-radius: 50px;
+    overflow: hidden; */
+    display: none;
+  }
+
+  .header-sosmed-header {
+  }
+  .logo-search {
+    width: 80%;
+  }
+
+  .price-tag > a {
+    font-size: small;
+  }
+
+  .segitiga {
+    height: 0px;
+    width: 0px;
+    margin: 6px 0px 0px 5px;
+    border-bottom: solid 7px rgb(0, 0, 0);
+    border-left: solid 4px transparent;
+    border-right: solid 4px transparent;
+    transform: rotateZ(90deg);
+    position: absolute;
+  }
+  #message > .container > .flex > .left > .prev-next > .next {
+    margin-left: 36%;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .card-title {
+    font-size: small;
+  }
+
+  .card-description {
+    font-size: x-small;
+  }
+
+  .card-description-detail > img {
+    width: 15px;
+  }
+
+  #message > .container > .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #message > .container > .flex > .left {
+    width: 100%;
+  }
+
+  #message > .container > .flex > .right {
+    width: 100%;
+    padding: 30px 0px 30px 0px;
+    margin-top: 30px;
+  }
+
+  #message > .container > .flex > .right > .form > .input-form > input {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+
+  #message > .container > .flex > .right > .form > .input-form > textarea {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+
+  #message > .container > .flex > .right > .form > button {
+    padding: 5px 0px 5px 0px;
+  }
+
+  .foot-note {
+    width: 100%;
+  }
+
+  #message > .container > .flex > .left > .prev-next > .next {
+    margin-left: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex > .card-4 {
+    width: 75%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(189, 189, 189);
+  }
+
+  #package {
+    margin-bottom: 100px;
+  }
+
+  #home {
+    margin-bottom: 100px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #29406e;
+  }
+
+  .navbar-mobile > .header-navbar-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-mobile > .header-navbar-mobile > img {
+    width: 80px;
+    height: auto;
+    margin: 20px 0px 10px 0px;
+  }
+
+  .navbar-mobile > .search-navbar-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .navbar-mobile > .search-navbar-mobile > .search-mobile-form > input {
+    width: 70%;
+    border-radius: 20px;
+    border-style: none;
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .navbar-mobile > .search-navbar-mobile > input:focus {
+    outline-width: 0px;
+  }
+
+  #search-mobile {
+    background-color: white;
+    padding: 0px 5px 0px 5px;
+    border-radius: 20px;
+    font-size: small;
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+  }
+
+  .search-mobile-form {
+    width: 60%;
+    margin-left: 10%;
+    display: flex;
+  }
+
+  .search-navbar-mobile > .dropdown-user {
+    margin-right: 10%;
+  }
+
+  .search-navbar-mobile > .dropdown-user > button > img {
+    width: 25px;
+    height: auto;
+  }
+
+  .slider > .welcome > h1 {
+    font-size: xx-large;
+  }
+
+  .dropdown-user > .dropdown-list {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 80px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: -30px;
+  }
 }

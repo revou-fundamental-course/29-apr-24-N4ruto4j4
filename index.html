@@ -12,6 +12,30 @@
     <title>Kita Gow</title>
   </head>
   <body>
+
+    <!-- navbar mobile -->
+
+    <header class="navbar-mobile">
+      <div class="header-navbar-mobile">
+        <img src="assets/logo.png" alt="">
+      </div>
+      <div class="search-navbar-mobile">
+        <div class="search-mobile-form">
+          <input type="text" class="search-mobile" placeholder="search your destination">
+          <a href="" id="search-btn-mobile"><img src="assets/icon/search.png" alt="" id="icon-search-btn"></a>
+        </div>
+        <div class="dropdown-user">
+          <button class="dropdown-btn"><img src="assets/icon/icon_user.png" alt=""><div class="triangle-toggle-down"></div></button>
+          <div class="dropdown-list">
+            <a href="">Sign Up</a>
+            <a href="">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- navbar tablet dan desktop -->
+
     <nav class="navbar">
       <div class="logo-search">
         <div class="logo-search-left">
@@ -21,16 +45,24 @@
             <input type="text" class="search" placeholder="search your destination">
                 <img src="assets/icon/search.png" alt="">
             </input>
+            <a href="" id="search" onclick="unable()">Search</a>
         </div>
       </div>
       <div class="header-nav">
-        <a href="">Home</a>
-        <a href="">Package</a>
-        <a href="">Massage</a>
+        <a href="#home">Home</a>
+        <a href="#package">Package</a>
+        <a href="#message">Message</a>
       </div>
       <div class="header-login">
-        <a href="">Sign Up</a>
-        <a href="">Sign In</a>
+        <a href="" onClick="unable()">Sign Up</a>
+        <a href="" onClick="unable()">Sign In</a>
+      </div>
+      <div class="dropdown-user">
+        <button class="dropdown-btn"><img src="assets/icon/icon_user.png" alt=""><div class="triangle-toggle-down"></div></button>
+        <div class="dropdown-list">
+          <a href="">Sign Up</a>
+          <a href="">Sign In</a>
+        </div>
       </div>
       <div class="header-sosmed">
         <div class="header-sosmed-header">
@@ -46,12 +78,20 @@
         </div>
       </div>
     </nav>
-    <section class="home">
+    <div class="header-nav-down">
+      <a href="#home">Home</a>
+      <a href="#package">Package</a>
+      <a href="#message">Message</a>
+    </div>
+
+    <!-- home section -->
+
+    <section id="home">
       <div class="slider">
         <div class="welcome">
           <h1>Welcome to<br>Kita Global Wisata</h1>
           <p></p>
-          <a href="">Special Package</a>
+          <a href=""  onclick="alert('Maaf! halaman belum tersedia')">Special Package</a>
         </div>
         <div class="prev-next">
           <button onclick="plusDivs(-1)"><</button>
@@ -62,12 +102,15 @@
         <img class="img-slide" src="assets/banner_3.jpeg" alt="">
       </div>
     </section>
-    <section class="Package">
+
+    <!-- package section -->
+
+    <section id="package">
       <div class="container">
-        <h1 class="header-section">Package</h1>
-        <div class="flex-4">
-          <div class="card">
-            <a href="">
+        <header>Package</header>
+        <div class="flex">
+          <div class="card-4">
+            <a href="#">
               <div class="card-thumb"><img src="assets/pantai_kuta.jpg" alt=""></div>
               <div class="card-tag"><span>Best Seller</span></div>
               <div class="card-title"><h4>Kuta Beach - Lombok</h4></div>
@@ -76,68 +119,118 @@
                 <div class="card-description-detail"><img src="assets/icon/ship.png" alt=""><span>Fiber Boat</span></div>
                 <div class="card-description-detail"><img src="assets/icon/airplane.png" alt=""><span>Citylink</span></div>
               </div>
-              <div class="price-tag"><span class="price-tag-price"></span><a href="">View Detail</a></div>
             </a>
+            <div class="price-tag"><span class="price-tag-price"><strong>IDR 3.500.000</strong></span><a href="">Select <span class="segitiga"></span></a></div>
           </div>
-          <a href="">
-            <div class="card">
-              <div class="card-thumb"><img src="assets/pantai_kuta.jpg" alt=""></div>
+          <div class="card-4">
+            <a href="#">
+              <div class="card-thumb"><img src="assets/pantai pink.jpg" alt=""></div>
               <div class="card-tag"><span>Best Seller</span></div>
-              <div class="card-title"></div>
+              <div class="card-title"><h4>Pink Beach - Lombok</h4></div>
               <div class="card-description">
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
+                <div class="card-description-detail"><img src="assets/icon/day.png" alt=""><span>3D & 2N</span></div>
+                <div class="card-description-detail"><img src="assets/icon/ship.png" alt=""><span>Fiber Boat</span></div>
+                <div class="card-description-detail"><img src="assets/icon/airplane.png" alt=""><span>Citylink</span></div>
               </div>
-              <div class="price-tag"><span class="price-tag-price"></span><a href="">View Detail</a></div>
-            </div>
-          </a>
-          <a href="">
-            <div class="card">
-              <div class="card-thumb"><img src="assets/pantai_kuta.jpg" alt=""></div>
+            </a>
+            <div class="price-tag"><span class="price-tag-price"><strong>IDR 3.800.000</strong></span><a href="">Select <span class="segitiga"></span></a></div>
+          </div>
+          <div class="card-4">
+            <a href="#">
+              <div class="card-thumb"><img src="assets/gili_nanggu.jpg" alt=""></div>
               <div class="card-tag"><span>Best Seller</span></div>
-              <div class="card-title"></div>
+              <div class="card-title"><h4>Gili Nanggu - Lombok</h4></div>
               <div class="card-description">
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
+                <div class="card-description-detail"><img src="assets/icon/day.png" alt=""><span>3D & 2N</span></div>
+                <div class="card-description-detail"><img src="assets/icon/ship.png" alt=""><span>Fiber Boat</span></div>
+                <div class="card-description-detail"><img src="assets/icon/airplane.png" alt=""><span>Citylink</span></div>
               </div>
-              <div class="price-tag"><span class="price-tag-price"></span><a href="">View Detail</a></div>
-            </div>
-          </a>
-          <a href="">
-            <div class="card">
-              <div class="card-thumb"><img src="assets/pantai_kuta.jpg" alt=""></div>
-              <div class="card-tag"><span id="discount">Discount</span></div>
-              <div class="card-title"></div>
+            </a>
+            <div class="price-tag"><span class="price-tag-price"><strong>IDR 4.000.000</strong></span><a href="">Select <span class="segitiga"></span></a></div>
+          </div>
+          <div class="card-4">
+            <a href="#">
+              <div class="card-thumb"><img src="assets/bromo_oke.jpg" alt=""></div>
+              <div id="discount"><div class="card-tag"><span>Discount</span></div></div>
+              <div class="card-title"><h4>Mount Bromo - Malang</h4></div>
               <div class="card-description">
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
-                <div class="card-description-detail"><img src="" alt=""><span></span></div>
+                <div class="card-description-detail"><img src="assets/icon/day.png" alt=""><span>3D & 2N</span></div>
+                <div class="card-description-detail"><img src="assets/icon/ship.png" alt=""><span>-</span></div>
+                <div class="card-description-detail"><img src="assets/icon/airplane.png" alt=""><span>Citylink</span></div>
               </div>
-              <div class="price-tag"><span class="price-tag-price"></span><a href="">View Detail</a></div>
-            </div>
-          </a>
+            </a>
+            <div id="discount"><div class="price-tag"><span class="price-tag-price"><strong>IDR 2.500.000</strong></span><a href="">Select <span class="segitiga"></span></a></div></div>
+          </div>
         </div>
-        <div class="header-section button-section"><a href="">Other Package</a></div>
+        <div class="button-section"><a href="" onclick="alert('Maaf! halaman belum tersedia')">Other Package</a></div>
       </div>
     </section>
-    <section class="message">
+
+    <!-- message section -->
+
+    <section id="message">
       <div class="container">
-        <h1 class="header-section"></h1>
-        <div class="flex-2">
-          <div class="card left"></div>
-          <div class="card right"></div>
+        <header>Message</header>
+        <p>Your happiness is our heppiness</p>
+        <div class="flex">
+          <div class="card-2 left">
+            <div class="prev-next">
+              <button onclick="plusDivsMessage(-1)" class="prev"><</button>
+              <button onclick="plusDivsMessage(+1)" class="next">></button>
+            </div>
+            <img src="assets/banner_1.jpg" alt="" class="img-slide-message">
+            <img src="assets/banner_2.jpg" alt="" class="img-slide-message">
+            <img src="assets/banner_3.jpeg" alt="" class="img-slide-message">
+            <div class="testimoni">
+              <img src="assets/icon/profile_empty.png" alt="">
+              <div class="message">
+                <h4>Abdur Razak Asrofi</h4>
+                <p>Pegawai Swasta - 25 Tahun</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-2 right">
+            <header>Contact Us</header>
+            <p>We will contact you 1x24 hours after we receive your message</p>
+            <form action="" method="post" id="submit"></form>
+            <div class="form">
+              <div class="input-form">
+                <label for="username">Username</label><br>
+                <input type="text" name="username" id="username"><br>
+              </div>
+              <div class="input-form">
+                <label for="email">Email Address</label><br>
+                <input type="email" name="email" id="email"><br>
+              </div>
+              <div class="input-form">
+                <label for="message">Message</label><br>
+                <textarea name="message-text" id="message-text"></textarea>
+              </div>
+              <span id="error">Isian form tidak boleh kosong!</span>
+              <button onclick="check_form()" id="btn-send">Send</button>
+            </div>
+          </div>
+          <div class="foot-note">
+            <p>We hope this message finds you well. At Kita Global Wisata, we are thrilled to present an exclusive vacation package tailored to your interests and preferences. We believe you deserve a memorable getaway filled with relaxation, adventure, and unforgettable experiences.</p>
+            <ol type="1">
+              <li>Round-trip flights from [Departure City]</li>
+              <li>Accommodation at a luxury beachfront resort</li>
+              <li>Daily breakfast with a view</li>
+              <li>Guided tours to Bali's iconic landmarks</li>
+              <li>Sunset cruise with dinner</li>
+              <li>Cultural performances and local experiences</li>
+              <li>Airport transfers and transportation throughout the trip</li>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- footer -->
+    
     <footer class="footer">
       <div class="container">
-        <div class="flex-2">
-          <div class="legend"></div>
-          <div class="social-media"></div>
-        </div>
-        <div></div>
+        <p>copyright <a href="">www.kitaglobal.com</a></p>
       </div>
     </footer>
   </body>
